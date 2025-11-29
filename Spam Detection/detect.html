@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SpamGuard | Detector</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="container navbar">
+    <div>
+      <div class="brand">SpamGuard</div>
+      <div class="tagline-small">Spot the scam before it spots you.</div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="detect.html" class="active">Detector</a></li>
+      <li><a href="tips.html">Tips & Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <h1 class="section-title">Spam Detection Tool</h1>
+      <p class="section-subtitle">
+        Paste any email, SMS or chat message below. SpamGuard will score it and highlight
+        risky parts in real time.
+      </p>
+
+      <div class="detect-layout">
+        
+        <div>
+          <label class="input-label" for="spamInput">Message Content</label>
+          <textarea id="spamInput"
+            placeholder="Example: Congratulations! You have won a FREE prize. Click here within 2 hours to claim your reward..."></textarea>
+          <div class="small-note" id="charCount">0 characters</div>
+
+          <div class="detect-buttons">
+            <button id="analyzeBtn" class="btn-primary" type="button">Analyze</button>
+            <button id="clearBtn" class="btn-secondary" type="button">Clear</button>
+            <button id="sampleBtn" class="btn-secondary" type="button">Use Sample Spam</button>
+          </div>
+        </div>
+
+        
+        <div>
+          <div class="result-box">
+            <div class="result-main">
+              <p><strong>Spam Score:</strong> <span id="spamScore" class="result-score">0</span>/100</p>
+              <p><strong>Status:</strong> <span id="spamStatus" class="status-text">—</span></p>
+              <p><strong>Category:</strong> <span id="spamCategory">—</span></p>
+            </div>
+
+            <div class="highlight-box" id="highlightBox">
+              Message highlights will appear here.
+            </div>
+
+            <div class="history-box">
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <strong>Recent Analyses</strong>
+                <button id="clearHistoryBtn" class="btn-secondary" style="padding:4px 10px;font-size:0.8rem;">
+                  Clear history
+                </button>
+              </div>
+              <ul id="historyList" class="history-list">
+               
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  SpamGuard – Spot the scam before it spots you.
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SpamGuard | Tips & Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="container navbar">
+    <div>
+      <div class="brand">SpamGuard</div>
+      <div class="tagline-small">Spot the scam before it spots you.</div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="detect.html">Detector</a></li>
+      <li><a href="tips.html" class="active">Tips & Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <h1 class="section-title">Safety Tips & Feedback</h1>
+      <p class="section-subtitle">Learn safe practices and share your feedback.</p>
+
+      <div class="contact-grid">
+        <!-- LEFT: Tips + API -->
+        <div>
+          <div class="card">
+            <h3>Basic Safety Tips</h3>
+            <ul style="margin-top:8px; padding-left:18px; font-size:0.95rem;">
+              <li>Never share OTP, passwords or bank details.</li>
+              <li>Be careful with messages that sound “too good to be true”.</li>
+              <li>Always double-check the sender’s email or phone number.</li>
+              <li>Do not click unfamiliar links or download unknown attachments.</li>
+            </ul>
+          </div>
+
+          <div class="card api-tips">
+            <h3>Extra Tips (from Public API)</h3>
+            <div id="apiTips" style="font-size:0.9rem; margin-top:6px;">
+              Loading tips...
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Contact / Form -->
+        <div class="contact-box">
+          <h3>Contact / Feedback</h3>
+          <p style="font-size:0.9rem; color:#6a75a0; margin-top:4px;">
+            This form is for demo only. It validates inputs and stores them in localStorage.
+          </p>
+
+          <form id="contactForm" style="margin-top:10px;">
+            <label class="input-label" for="name">Name</label>
+            <input class="input-field" type="text" id="name" name="name" placeholder="Your name">
+
+            <label class="input-label" for="email" style="margin-top:8px;">Email</label>
+            <input class="input-field" type="email" id="email" name="email" placeholder="you@example.com">
+
+            <label class="input-label" for="message" style="margin-top:8px;">Message</label>
+            <textarea class="textarea-field" id="message" name="message"
+                      placeholder="Share your experience or suggestions..."></textarea>
+
+            <div id="contactErrors" class="error-box"></div>
+            <div id="contactSuccess" class="success-box"></div>
+
+            <button type="submit" class="btn-primary" style="margin-top:10px;">Submit Feedback</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+SpamGuard – Spot the scam before it spots you.
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
